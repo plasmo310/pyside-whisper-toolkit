@@ -1,0 +1,30 @@
+.venv/
+__pycache__/
+*.pyc
+.python-version
+
+# IDE
+.vscode
+
+# 書き出し結果
+output/*
+!output/.gitkeep
+
+# リリース資産
+release
+
+# 入力音声（サイズが大きいのでコミットしない）
+input/audio/*
+!input/audio/.gitkeep
+
+# 歌詞は著作物なのでコミットしない
+input/lyrics/*
+!input/lyrics/.gitkeep
+
+# ローカルに置いた Whisper モデル
+models/
+
+# PyInstaller のビルド成果物
+build_env/.venv/
+build_env/scripts/*/build/
+build_env/scripts/*/dist/

@@ -1,0 +1,3 @@
+# 本家 OpenAI Whisper を試す場合の追加インストール用（任意）
+# 別途 ffmpeg のインストールが必要: winget install Gyan.FFmpeg
+openai-whisper>=20240930

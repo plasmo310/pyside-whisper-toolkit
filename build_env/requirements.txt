@@ -1,0 +1,3 @@
+# ビルド用の環境。アプリ本体の依存 + PyInstaller
+-r ../requirements.txt
+pyinstaller>=6.20.0

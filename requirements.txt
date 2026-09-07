@@ -1,0 +1,8 @@
+# Whisper 本体 (CTranslate2 実装。ffmpeg の別途インストール不要・CPU でも高速)
+faster-whisper>=1.1.0
+
+# faster-whisper が依存として自動で入るもの（参考）:
+#   ctranslate2, tokenizers, huggingface-hub, onnxruntime, av
+
+# GUI (PySide6)。python/gui/ のツールだけが使う。CLI には不要
+PySide6>=6.11.0
