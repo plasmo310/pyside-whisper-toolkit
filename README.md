@@ -9,6 +9,8 @@
 Instead of the original `openai-whisper`, this tool runs on **[faster-whisper](https://github.com/SYSTRAN/faster-whisper)**.  
 It is an optimized reimplementation of the same models: roughly **4x faster even on CPU**, and it **does not require a separate ffmpeg installation**.
 
+**Article:** [[PySide6] Building a GUI Tool to Transcribe Audio and Get Lyric Timestamps with Whisper [Whisper Toolkit]](https://elekibear.com/en/post/20260907_01_whisper_toolkit)
+
 | What it does                                                                                               | Output                             |
 | ---------------------------------------------------------------------------------------------------------- | ---------------------------------- |
 | **Transcription** — write out full text and subtitles from audio/video                                     | `.txt` / `.srt` / `.vtt` / `.json` |
