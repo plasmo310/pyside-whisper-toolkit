@@ -30,10 +30,13 @@ def _add_nvidia_dll_dirs() -> None:
         import nvidia
     except ImportError:
         return
-    base = os.path.dirname(nvidia.__file__)
-    for sub in ("cublas", "cudnn", "cuda_runtime"):
-        directory = os.path.join(base, sub, "bin")
-        if os.path.isdir(directory):
+    # 最近の nvidia-* は __init__.py の無い名前空間パッケージで
+    # nvidia.__file__ が None になるため、__path__ の各要素から探す
+    for base in list(getattr(nvidia, "__path__", [])):
+        for sub in ("cublas", "cudnn", "cuda_runtime"):
+            directory = os.path.join(base, sub, "bin")
+            if not os.path.isdir(directory):
+                continue
             try:
                 os.add_dll_directory(directory)
             except (AttributeError, OSError):

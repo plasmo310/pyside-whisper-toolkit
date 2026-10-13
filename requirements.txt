@@ -1,5 +1,8 @@
 # Whisper 本体 (CTranslate2 実装。ffmpeg の別途インストール不要・CPU でも高速)
 faster-whisper>=1.1.0
+# av 19 で av.open() の metadata_errors 引数が無くなり、faster-whisper 1.2.1
+# の音声読み込みが TypeError で落ちるため 19 未満に固定する
+av<19
 
 # faster-whisper が依存として自動で入るもの（参考）:
 #   ctranslate2, tokenizers, huggingface-hub, onnxruntime, av
