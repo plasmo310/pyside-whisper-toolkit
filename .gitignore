@@ -27,3 +27,4 @@ models/
 build_env/.venv/
 build_env/scripts/*/build/
 build_env/scripts/*/dist/
+build_env/*.spec
